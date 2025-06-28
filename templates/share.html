@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Roast 🔥</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Roast 👊</h1>
+    <div class="result">
+      <p>{{ roast }}</p>
+    </div>
+
+    <h3>🔗 Share this roast:</h3>
+    <input id="share-url" type="text" readonly value="{{ share_link }}">
+    <button onclick="copyLink()">Copy Link</button>
+    <span id="copied-msg" style="display:none; color: lime;">✔ Copied!</span>
+
+    <script>
+      function copyLink() {
+        const copyText = document.getElementById("share-url");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // for mobile
+        navigator.clipboard.writeText(copyText.value).then(() => {
+          document.getElementById("copied-msg").style.display = "inline";
+          setTimeout(() => {
+            document.getElementById("copied-msg").style.display = "none";
+          }, 2000);
+        });
+      }
+    </script>
+
+    <br><br>
+    <a href="/">🔥 Roast another</a>
+  </div>
+</body>
+</html>

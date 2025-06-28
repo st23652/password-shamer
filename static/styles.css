@@ -1,0 +1,31 @@
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #222;
+    color: #eee;
+    border: 1px solid #333;
+}
+button {
+    background-color: #ff0040;
+    border: none;
+    cursor: pointer;
+}
+.result {
+    margin-top: 20px;
+    background: #222;
+    padding: 20px;
+    border-radius: 5px;
+}
